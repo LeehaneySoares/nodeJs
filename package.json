@@ -22,5 +22,8 @@
   },
   "devDependencies": {
     "axios": "^0.27.2"
-  }
+  },
+  "workspaces": [
+    "*/aula.01"
+  ]
 }
