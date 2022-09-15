@@ -21,7 +21,8 @@
     "express": "^4.18.1"
   },
   "devDependencies": {
-    "axios": "^0.27.2"
+    "axios": "^0.27.2",
+    "moment": "^2.29.4"
   },
   "workspaces": [
     "*/aula.01"
