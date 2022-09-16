@@ -4,12 +4,14 @@ const date = new Date()
 
 const formateDate = new Intl.DateTimeFormat('pt-BR').format(date)
 
-moment.locale('pt-BR')
+// moment().locale('pt-BR')
 
-const dia = moment().format('dddd')
+const teste = moment().date()
 
-console.log(dia)
+// const dia = moment().format('dddd')
 
-console.log(`
-  O dia da semana com moment é: ${dia}. Com o INTL: ${formateDate}
-`)
+console.log(teste)
+
+// console.log(`
+//   O dia da semana com moment é: ${dia}. Com o INTL: ${formateDate}
+// `)
