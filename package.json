@@ -14,6 +14,8 @@
     "url": "https://github.com/LeehaneySoares/nodeJs/issues"
   },
   "homepage": "https://github.com/LeehaneySoares/nodeJs#readme",
-  "devDependencies": {},
-  "dependencies": {}
+  "devDependencies": {
+    "@tsconfig/node16": "^1.0.3",
+    "@types/node": "^18.11.9"
+  }
 }
