@@ -12,7 +12,8 @@ const pessoas = [
 
 const json = JSON.stringify(pessoas, '', 2)
 
-// write(currentPath, json)
+write(currentPath, json)
+
 async function ler (caminho) {
   let result = await read(caminho)
   let resultParsed = await JSON.parse(result)
