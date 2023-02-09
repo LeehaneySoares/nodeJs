@@ -1,22 +1,14 @@
 const express = require('express')
-const app = express()
+const router = express()
 
-app.get('/', (request, response) =>
-  response.send(`
-    <form action='/' method='POST'>
-      <label for='nome'>Nome:</label>
-      <input type='text' name='nome' />
-      <label for='senha'>Senha</label>
-      <input type='password' name='senha' />
-      <button type='submit'>Enviar</button>
-    </form>
+router.get('/testes/:id?', (req, res) => {
+  res.send(`Os parâmetros passados foram:
+    ${req.query['utm_source']},
+    ${req.query['utm_medium']},
+    ${req.query['utm_campaign']}
   `)
-)
+})
 
-app.post('/', (req, res) =>
-  res.send('Obrigado por nos enviar. Formulário recebido!')
-)
-
-app.listen(3000, function () {
-  console.log('Servidor executando na porta 3000')
+router.listen(3000, function () {
+  console.log('servidor rodando na porta 3000')
 })
