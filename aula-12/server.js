@@ -1,14 +1,10 @@
 const express = require('express')
-const router = express()
+const app = express()
+const routes = require('./routes')
 
-router.get('/testes/:id?', (req, res) => {
-  res.send(`Os parâmetros passados foram:
-    ${req.query['utm_source']},
-    ${req.query['utm_medium']},
-    ${req.query['utm_campaign']}
-  `)
-})
+app.use(express.urlencoded({ extended: true }))
+app.use(routes)
 
-router.listen(3000, function () {
-  console.log('servidor rodando na porta 3000')
+app.listen(3333, function () {
+  console.log('servidor rodando na porta 3333. Acesse: http://localhost:3333')
 })
