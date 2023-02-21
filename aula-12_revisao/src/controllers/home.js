@@ -1,5 +1,5 @@
 exports.home = async function (req, res) {
-  res.send('Pagina inicial')
+  res.render('index')
 }
 
 exports.banner = async function (req, res) {

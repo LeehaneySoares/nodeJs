@@ -4337,7 +4337,7 @@ exports.home = /*#__PURE__*/function () {
     return _regeneratorRuntime().wrap(function _callee$(_context) {
       while (1) switch (_context.prev = _context.next) {
         case 0:
-          res.send('Pagina inicial');
+          res.render('index');
         case 1:
         case "end":
           return _context.stop();
@@ -4421,13 +4421,17 @@ __webpack_require__.r(__webpack_exports__);
   \******************************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
+var __dirname = "/";
 /* provided dependency */ var console = __webpack_require__(/*! ./node_modules/console-browserify/index.js */ "./node_modules/console-browserify/index.js");
+var path = __webpack_require__(/*! path */ "./node_modules/path-browserify/index.js");
 var express = __webpack_require__(/*! express */ "./node_modules/express/index.js");
 var app = express();
 var routes = __webpack_require__(/*! ../routes/routes */ "./src/routes/routes.js");
 app.use(express.urlencoded({
   extended: true
 }));
+app.set('views', path.resolve(__dirname, '..', 'views'));
+app.set('view engine', 'ejs');
 app.use(routes);
 app.listen(3000, function () {
   return console.log('Servidor rodando na porta 3000'), console.log('http://localhost:3000/');
