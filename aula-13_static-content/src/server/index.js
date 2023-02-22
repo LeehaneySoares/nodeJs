@@ -1,1 +1,3 @@
-export { default } from './server'
+const server = require('./server')
+
+module.exports = server
